@@ -1,0 +1,44 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.nav-shopping-bag{
+    max-width: fit-content;
+}
+
+.nav-list{
+ 
+    list-style: none;
+
+}
+li a{
+    padding: 0 1rem 0 1rem;
+    text-decoration: none;
+    color: black;
+}
+
+.checkIn img {
+    max-width: 1rem;
+}
+
+.check_date{
+border: none;
+background-color: transparent;
+border-bottom: 2px solid rgba(128, 128, 128, 0.34);
+
+}
+
+.adult-person img, .child img{
+    max-width: 1rem;
+}
+
+.search_room_dropdown{
+    border:none;
+    border-bottom: 1px solid gray;
+}
+
+.about_us{
+    border: none;
+    padding: 0.5rem;
+}
