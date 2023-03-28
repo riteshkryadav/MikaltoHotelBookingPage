@@ -1,102 +1,147 @@
-*{
-    padding: 0;
-    margin: 0;
+* {
+  padding: 0;
+  margin: 0;
+}
+.luxuryContainer {
+  height: 75vh;
 }
 
-.nav-shopping-bag{
-    max-width: fit-content;
+.nav-shopping-bag {
+  max-width: fit-content;
 }
 
-.nav-list{
- 
-    list-style: none;
-
+.brand-title {
+  font-size: 12px;
 }
-li a{
-    padding: 0 1rem 0 1rem;
-    text-decoration: none;
-    color: black;
+.shopIcon {
+  position: absolute;
+  right: 5%;
+  top: 0%;
+}
+@media (max-width: 786px) {
+  .shopIcon {
+    display: none;
+  }
+}
+
+.nav-list {
+  list-style: none;
+}
+li a {
+  padding: 0 1rem 0 1rem;
+  text-decoration: none;
+  color: black;
 }
 
 .checkIn img {
-    max-width: 1rem;
+  max-width: 1rem;
 }
 
-.check_date{
-border: none;
-background-color: transparent;
-border-bottom: 2px solid rgba(128, 128, 128, 0.34);
-
+.check_date {
+  border: none;
+  background-color: transparent;
+  border-bottom: 2px solid rgba(128, 128, 128, 0.34);
 }
 
-.adult-person img, .child img{
-    max-width: 1rem;
+.adult-person img,
+.child img {
+  max-width: 1rem;
 }
 
-.search_room_dropdown{
-    border:none;
-    border-bottom: 1px solid gray;
+.search_room_dropdown {
+  border: none;
+  border-bottom: 1px solid gray;
 }
 
-.about_us{
-    border: none;
-    padding: 0.5rem;
+.outdoor_view {
+  top: 2rem;
+  left: 4rem;
+  z-index: 2;
+}
+.indoor_view {
+  position: relative;
+  left: 45%;
+  /* top: %; */
+  z-index: 1;
 }
 
-.section_3_image{
-    max-width: 50%;
+.chef_img {
+  position: relative;
+  left: -1%;
 }
 
-.activites_img{
-    width:100% ;
+.about_us {
+  border: none;
+  padding: 0.5rem;
 }
 
-.experience_img{
-    width: 100%;
-    height: 50%;
+.section_3_image {
+  max-width: 50%;
 }
 
-.section_8{
-    height: 25vh;
-    background-image: url(../img/section_8/bg_image.jpeg);
-    background-repeat: no-repeat;
-    background-size: cover;
-
+.activites_img {
+  width: 100%;
 }
 
-.section_9{
-    background-color: antiquewhite;
+.experience_img {
+  width: 100%;
+  height: 50%;
 }
 
-.section_9_profile_pic{
-    width: 5rem;
+.section_8 {
+  background-image: url(../img/section_8/swimming.png);
 }
 
-.section_9_profile_icon{
-    width: 3rem;
+.section_9 {
+  background-color: antiquewhite;
 }
 
-.section_9_profile_dot{
-    max-width:6rem ;
+.section_9_profile_pic {
+  width: 5rem;
 }
 
-.section_10_map{
-    max-width: 100%;
-    max-height: 100%;
+.section_9_profile_icon {
+  width: 3rem;
 }
 
-.section_11{
-    background-color:antiquewhite ;
+.section_9_profile_dot {
+  max-width: 6rem;
 }
 
-.section_11_bridge{
-    max-width: 50%;
+.section_10_map {
+  max-width: 100%;
+  max-height: 100%;
 }
 
-.section_11_bridge img{
-    width: 100%;
-    height: 15rem;
+.section_11 {
+  background-color: antiquewhite;
 }
-.section_11_img img{
-    max-width: 100%;
+
+.section_11_bridge {
+  max-width: 50%;
+}
+
+.section_11_bridge img {
+  width: 100%;
+  height: 16rem;
+}
+.section_11_img img {
+  width: 100%;
+  height: 8rem;
+}
+
+.footer {
+  background-color: rgb(29, 0, 108);
+}
+
+.footer_social_media {
+  color: aliceblue;
+  max-width: 2rem;
+  /* padding-left: .rem; */
+}
+
+@media screen and (max-width: 768px) {
+  .luxuryContainer {
+    display: none;
+  }
 }
