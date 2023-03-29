@@ -17,11 +17,15 @@
       integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N"
       crossorigin="anonymous"
     ></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+
   </head>
 
   <body>
+    
+
     <nav
-      class="navbar navbar-expand-lg container-fluid navbar-light bg-light px-4 d-flex"
+      class="navbar navbar-expand-lg container-fluid navbar-light  px-4 d-flex"
     >
       <div class="container-fluid row d-flex justify-content-between">
         <h2 class="navbar-brand overflow-visible col-2">
@@ -90,9 +94,10 @@
     </nav>
 
     <!-- section 2 -->
-    <section class="container py-3">
+
+    <section class="container-fluid py-md-3 justify-content-md-start justify-content-center" id="landing_page">
       <div class="row d-flex align-items-center">
-        <div class="col-12 col-md-6">
+        <div class="col-12  col-md-6">
           <div class="">
             <h1>
               Enjoy Your <br />
@@ -101,30 +106,30 @@
             <p class="p-2">Quite and endlessly beautiful hideway</p>
           </div>
           <div class="d-flex py-2">
-            <button class="about_us col-4 bg-light">About Us</button>
-            <button class="about_us col-4 bg-transparent">
+            <button class="about_us col-4 rounded-1 bg-light">About Us</button>
+            <a class="about_us col-4 text-decoration-none text-dark">
               View HomeStay →
-            </button>
+            </a>
           </div>
         </div>
         <div class="col-md-5 col-12 px-4 py-4 bg-light">
-          <form class="offset-sm-1 col-10" action="">
+          <form class="offset-sm-1 col-10" action="" onsubmit="handleForm(event)">
             <h2>Search Room</h2>
             <p>Get the latest on our COVID-19 response</p>
-            <div class="d-flex justify-content-between py-5">
+            <div class="check_in_out  justify-content-between py-5">
               <p class="">
                 <span class="checkIn d-flex"
                   ><img src="./img/section_2/calendar.svg" alt="" />
                   Checkin*</span
                 >
-                <input class="check_date" type="date" name="" id="" />
+                <input class="check_date" type="date" name="" id="checkIn" />
               </p>
               <p class="">
                 <span class="checkIn d-flex"
                   ><img src="./img/section_2/calendar.svg" alt="" />
                   Checkout*</span
                 >
-                <input class="check_date" type="date" name="" id="" />
+                <input class="check_date" type="date" name="" id="checkOut" />
               </p>
             </div>
             <div class="adult-person py-3">
@@ -138,7 +143,7 @@
               <select
                 name=""
                 class="search_room_dropdown w-100 bg-transparent"
-                id=""
+                id="adult"
               >
                 <option value="1">1</option>
                 <option value="2">2</option>
@@ -158,7 +163,7 @@
               <select
                 name=""
                 class="search_room_dropdown w-100 bg-transparent"
-                id=""
+                id="children"
               >
                 <option value="1">1</option>
                 <option value="2">2</option>
@@ -178,7 +183,7 @@
 
     <!-- section 3 -->
 
-    <section class="container">
+    <section class="container py-3">
       <div class="row d-flex align-items-center">
         <div class="col-12 col-md-6 px-5">
           <div class="text-primary">WELCOME TO</div>
@@ -208,7 +213,7 @@
           class="offset-md-0 col-9 col-md-6 position-relative luxuryContainer"
         >
           <img
-            class="section_3_image chef_img"
+            class="section_3_image  chef_img"
             src="./img/section_3/chef.jpeg"
             alt=""
           />
@@ -228,12 +233,12 @@
 
     <!-- section 4 -->
 
-    <section class="container bg-primary">
+    <section class="container-fluid room_discription py-4">
       <div
         class="row d-flex align-items-center justify-content-center my-5 px-0 text-light"
       >
-        <div class="col-10 col-md-4 offset-sm-1 bg-primary">
-          <div class="">
+        <div class="col-10 col-md-4 offset-sm-1 ">
+          <div class="" id="k">
             <span>ELANGNCE AND COMFORT</span>
             <h2>Standart Room</h2>
           </div>
@@ -241,79 +246,64 @@
             From:<b>$150</b> / night <br />
             Lorem ipsum, dolor sit amet consectetur adipisicing....
           </div>
-          <table>
-            <tr>
+          <table class="">
+            <t>
               <td class="py-2"><b>Bed:</b></td>
               <td class="py-2">Queen Size Bed</td>
-            </tr>
+            </t>
             <tr>
               <td class="py-2"><b>Capacity:</b></td>
               <td class="py-2">2 adult, 1 children</td>
             </tr>
             <tr>
               <td class="py-2"><b>Room Size:</b></td>
-              <td class="py-2">55 sqm</td>
+              <td class="py-2 ms-4">55 sqm</td>
             </tr>
             <tr>
               <td class="py-2"><b>View:</b></td>
-              <td class="py-2">garden view</td>
+              <td class="py-2 ">garden view</td>
             </tr>
           </table>
 
           <div>
-            <button class="bg-transparent border-1 btn my-3 border-light">
+            <a class="bg-transparent text-decoration-none  text-light  py-3 btn my-5">
               View Details
-            </button>
+            </a>
           </div>
         </div>
-
-        <div
-          id=" carouselExampleControls"
-          class="carousel col-10 col-md-7 slide"
-          data-ride="carousel"
-        >
-          <div class="carousel-inner">
-            <div class="carousel-item active">
-              <img
-                class="d-block w-100"
-                src="./img/section_3/hotel_indoor.jpeg"
-                alt="First slide"
-              />
-            </div>
-            <div class="carousel-item">
-              <img
-                class="d-block w-100"
-                src="./img/section_3/chef.jpeg"
-                alt="Second slide"
-              />
-            </div>
-            <div class="carousel-item">
-              <img
-                class="d-block w-100"
-                src="./img/section_3/hoteloutdoor.avif"
-                alt="Third slide"
-              />
-            </div>
+        <div class="container-lg col-10 col-md-7 my-3">
+          <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+              <!-- Carousel indicators -->
+              <ol class="carousel-indicators">
+                  <li data-bs-target="#myCarousel" data-bs-slide-to="0" class="active"></li>
+                  <li data-bs-target="#myCarousel" data-bs-slide-to="1"></li>
+                  <li data-bs-target="#myCarousel" data-bs-slide-to="2"></li>
+              </ol>
+              
+              <!-- Wrapper for carousel items -->
+              <div class="carousel-inner">
+                  <div class="carousel-item active" id="one">
+                      <img src="./img/section_4/luxary_room.webp" class="d-block w-100" alt="Slide 1">
+                  </div>
+                  <div class="carousel-item carousel-item-2 ">
+                      <img src="./img/section_4/2.jpeg" class="d-block w-100" alt="Slide 2">
+                  </div>
+                  <div class="carousel-item">
+                      <img src="./img/section_4/3.jpeg.crdownload" class="d-block w-100" alt="Slide 3">
+                  </div>
+              </div>
+      
+              <!-- Carousel controls -->
+              <a class="carousel-control-prev" href="#myCarousel" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon"></span>
+              </a>
+              <a class="carousel-control-next" href="#myCarousel" data-bs-slide="next">
+                  <span class="carousel-control-next-icon"></span>
+              </a>
           </div>
-          <a
-            class="carousel-control-prev"
-            href="#carouselExampleControls"
-            role="button"
-            data-slide="prev"
-          >
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="sr-only"></span>
-          </a>
-          <a
-            class="carousel-control-next"
-            href="#carouselExampleControls"
-            role="button"
-            data-slide="next"
-          >
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="sr-only"></span>
-          </a>
-        </div>
+      </div>
+      
+      
       </div>
     </section>
 
@@ -365,8 +355,8 @@
 
     <!-- section_6 -->
 
-    <section class="container">
-      <div class="row d-flex align-items-center bg-primary">
+    <section class="container-fluid container_6">
+      <div class="row d-flex align-items-center ">
         <div class="col-12 p-4 col-md-6 text-light">
           <div class="activities py-2 text-warning">OTHER ACTIVITIES</div>
           <div class="py-2">
@@ -381,7 +371,7 @@
             tortor.
           </div>
           <div class="py-2">
-            <button class="btn">Explore More →</button>
+            <button class="btn text-light">Explore More →</button>
           </div>
         </div>
 
@@ -395,14 +385,14 @@
 
         <div class="py-2 col-md-6">
           <img
-            class="activites_img"
+            class="activites_img w-100"
             src="./img/section_6/hotel_outer_view.webp"
             alt=""
           />
         </div>
 
         <div
-          class="col-12 col-md-6 p-4 text-light bg-primary align-items-center"
+          class="col-12 col-md-6 p-4 text-light  align-items-center"
         >
           <div class="activities text-warning">RECONNECT WITH NATURE</div>
           <div class="">
@@ -420,7 +410,7 @@
             </ul>
           </div>
           <div>
-            <button class="bg-transparent border-1 btn py-2 my-3 border-light">
+            <button class="bg-transparent border-1 btn text-light py-2 my-3 ">
               Book Your Stay
             </button>
           </div>
@@ -438,7 +428,7 @@
             feel it. Discover the luxury of Hotel Mikalto
           </h2>
         </div>
-        <div class="col-11 col-md-3 offset-sm-0 offset-1 p-2">
+        <div class="col-11 col-md-5 col-lg-3  offset-lg-0 offset-1 p-2">
           <img
             class="experience_img"
             src="./img/section_7/wellness.jpeg"
@@ -455,7 +445,7 @@
             >Discover more→</a
           >
         </div>
-        <div class="col-11 col-md-3 offset-sm-0 offset-1 p-2">
+        <div class="col-11 col-md-5 col-lg-3  offset-lg-0 offset-1 p-2">
           <img
             class="experience_img"
             src="./img/section_7/gift_of_future_travel.jpeg"
@@ -466,12 +456,13 @@
           <p class="text-secondary">
             Share extraordinary experiences with the Aman E- Gift Card -
             delivered instantly and offering memories that last a lifetime.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, perferendis.
           </p>
           <a class="text-decoration-none text-primary" href="#"
             >Discover more→</a
           >
         </div>
-        <div class="col-11 offset-sm-0 offset-1 col-md-3 p-2">
+        <div class="col-11 col-md-5 col-lg-3  offset-lg-0 offset-1 p-2">
           <img
             class="experience_img"
             src="./img/section_7/mikalro_shop.webp"
@@ -488,7 +479,7 @@
             >Discover more→</a
           >
         </div>
-        <div class="col-11 offset-sm-0 offset-1 col-md-3 p-2">
+        <div class="col-11 col-md-5 col-lg-3  offset-lg-0 offset-1 p-2">
           <img
             class="experience_img"
             src="./img/section_7/experience.jpeg"
@@ -511,7 +502,7 @@
     <!-- section 8 -->
 
     <section class="section_8 container py-5">
-      <div class="col-10 offset-1 col-md-3 offset-md-7 p-5 bg-light">
+      <div class="col-10 offset-1 col-md-5 offset-md-5 col-lg-3 offset-lg-7 p-5 bg-light">
         <h2>Say Hello to whole new You</h2>
         <p>
           Proin nec leo vel metus faucibus vehicula. Donec vulputate in magna
@@ -534,7 +525,7 @@
               alt=""
             />
             <p class="text-secondary">
-              <b class="text-dark">Selena Myer<br /></b>21-01-10
+              <b class="text-dark">Easter Howard<br /></b>21-01-10
             </p>
             <img
               class="section_9_profile_icon"
@@ -560,7 +551,7 @@
           <div class="d-flex justify-content-between align-items-center">
             <img
               class="rounded-circle section_9_profile_pic px-2"
-              src="./img/section_9/profile_pic.jpeg"
+              src="./img/section_9/profile_pic_2.png"
               alt=""
             />
             <p class="text-secondary">
@@ -580,21 +571,21 @@
             />
           </div>
           <span class="text-dark fs-5"
-            ><b>Wonderful new year trip <br /> </b
+            ><b>Recommended <br /> </b
           ></span>
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cumque porro
+           ipsum dolor, sit amet consectetur adipisicing elit. Cumque porro
           ad nemo perspiciatis nulla rerum! Repudiandae consequuntur
           voluptatibus est minus, aliquam quia harum animi culpa.
         </div>
         <div class="col-12 py-3 col-md-4 col-lg-3">
           <div class="d-flex justify-content-between align-items-center">
             <img
-              class="rounded-circle section_9_profile_pic px-2"
-              src="./img/section_9/profile_pic.jpeg"
+              class="rounded-circle  section_9_profile_pic px-2"
+              src="./img/section_9/profile_pic_3.jpeg"
               alt=""
             />
             <p class="text-secondary">
-              <b class="text-dark">Selena Myer<br /></b>21-01-10
+              <b class="text-dark">Jane Cooper<br /></b>21-01-10
             </p>
             <img
               class="section_9_profile_icon"
@@ -610,7 +601,7 @@
             />
           </div>
           <span class="text-dark fs-5"
-            ><b>Wonderful new year trip <br /> </b
+            ><b>All good <br /> </b
           ></span>
           Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cumque porro
           ad nemo perspiciatis nulla rerum! Repudiandae consequuntur
@@ -621,7 +612,7 @@
 
     <!-- section 10 -->
 
-    <section class="container py-5">
+    <section class="container-fluid py-5">
       <div class="row d-flex align-items-center">
         <div class="col-11 col-md-4 offset-1">
           <div class="">
@@ -675,10 +666,10 @@
 
         <div class="section_10_map col-11 col-md-6 offset-1 py-3">
           <iframe
-            class="rounded-3"
+            class="rounded-3 "
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3684.043901925615!2d88.42922191494593!3d22.57746128518026!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a0275a5466e0099%3A0x563fb49fb6394261!2sItobuz%20Technologies%20Pvt.%20Ltd.!5e0!3m2!1sen!2sin!4v1679915271728!5m2!1sen!2sin"
             width="90%"
-            height="600"
+            height="700"
             style="border: 0"
             allowfullscreen=""
             loading="lazy"
@@ -739,7 +730,7 @@
           />
           <button
             id="check"
-            class="subscribe p-3 border-start-0 bg-primary col-6 col-sm-2 offset-sm-0"
+            class="subscribe p-1 p-md-3 border-start-0 bg-primary col-6 col-md-2 offset-sm-0"
           >
             Subscribe
           </button>
@@ -940,7 +931,7 @@
         </div>
       </div>
     </section>
-
+    <script src="./script/main.js"></script>
     <script src="./script/chechin_data.mjs"></script>
   </body>
 </html>
