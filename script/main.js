@@ -1,5 +1,5 @@
 async function data() {
-  res = await fetch(`http://localhost:8080`)
+  res = await fetch(`http://localhost:8081`)
     .then((res) => {
       return res.json();
     })
@@ -29,7 +29,7 @@ function handleForm(event) {
     childrens: document.getElementById("children").value,
   };
   console.log(formData);
-  fetch("http://localhost:8080/", {
+  fetch("http://localhost:8081/", {
     method: "POST",
     headers: {
       "Content-type": "application/json; charset=UTF-8",
