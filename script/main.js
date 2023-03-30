@@ -1,5 +1,5 @@
 async function data() {
-  res = await fetch(`http://localhost:8081`)
+  res = await fetch(`http://localhost:8083`)
     .then((res) => {
       return res.json();
     })
@@ -10,13 +10,11 @@ async function data() {
   if (!res.error) {
     console.log(res[0].hero.slide1.one);
     console.log(res[0].hero.slide2.two);
-    console.log(res[0].hero.slide3.three);
     document.getElementById(
       "landing_page"
     ).style.backgroundImage = `url(${res[0].hero.image})`;
     document.getElementById("one").src = res[0].hero.slide1.image;
     document.getElementById("two").src = res[0].hero.slide2.image;
-    document.getElementById("three").src = res[0].hero.slide3.image;
   } else {
     console(res.error.message);
   }
@@ -33,7 +31,7 @@ function handleForm(event) {
     childrens: document.getElementById("children").value,
   };
   console.log(formData);
-  fetch("http://localhost:8081/", {
+  fetch("http://localhost:8083/", {
     method: "POST",
     headers: {
       "Content-type": "application/json; charset=UTF-8",
@@ -66,13 +64,7 @@ document.getElementById("next").addEventListener("click", () => {
     document.getElementById(
       "roomType"
     ).innerHTML = `${res[0].hero.slide2.roomType}`;
-    document.getElementById("price").innerHTML = `${res[0].hero.slide2.price}`;
-  } else if (swiper.activeIndex === 2) {
-    document.getElementById(
-      "roomType"
-    ).innerHTML = `${res[0].hero.slide3.roomType}`;
-    document.getElementById("price").innerHTML = `${res[0].hero.slide3.price}`;
-  }
+    document.getElementById("price").innerHTML = `${res[0].hero.slide2.price}`;}
 });
 
 document.getElementById("prev").addEventListener("click", () => {
@@ -87,10 +79,5 @@ document.getElementById("prev").addEventListener("click", () => {
       "roomType"
     ).innerHTML = `${res[0].hero.slide2.roomType}`;
     document.getElementById("price").innerHTML = `${res[0].hero.slide2.price}`;
-  } else if (swiper.activeIndex === 2) {
-    document.getElementById(
-      "roomType"
-    ).innerHTML = `${res[0].hero.slide3.roomType}`;
-    document.getElementById("price").innerHTML = `${res[0].hero.slide3.price}`;
-  }
+  } 
 });
