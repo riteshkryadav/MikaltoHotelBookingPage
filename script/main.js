@@ -8,14 +8,18 @@ async function data() {
     });
 
   if (!res.error) {
-    console.log(res);
+    console.log(res[0].hero.slide1.one);
+    console.log(res[0].hero.slide2.two);
+    console.log(res[0].hero.slide3.three);
+    document.getElementById(
+      "landing_page"
+    ).style.backgroundImage = `url(${res[0].hero.image})`;
+    document.getElementById("one").src = res[0].hero.slide1.image;
+    document.getElementById("two").src = res[0].hero.slide2.image;
+    document.getElementById("three").src = res[0].hero.slide3.image;
   } else {
     console(res.error.message);
   }
-
-  document.getElementById(
-    "landing_page"
-  ).style.backgroundImage = `url(${res[0].hero.image})`;
 }
 
 data();
@@ -43,3 +47,50 @@ function handleForm(event) {
     document.getElementById("childrens").value = "0";
   });
 }
+
+let swiper = new Swiper(".mySwiper", {
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+});
+
+document.getElementById("next").addEventListener("click", () => {
+  console.log(swiper.activeIndex);
+  if (swiper.activeIndex === 0) {
+    document.getElementById(
+      "roomType"
+    ).innerHTML = `${res[0].hero.slide1.roomType}`;
+    document.getElementById("price").innerHTML = `${res[0].hero.slide1.price}`;
+  } else if (swiper.activeIndex === 1) {
+    document.getElementById(
+      "roomType"
+    ).innerHTML = `${res[0].hero.slide2.roomType}`;
+    document.getElementById("price").innerHTML = `${res[0].hero.slide2.price}`;
+  } else if (swiper.activeIndex === 2) {
+    document.getElementById(
+      "roomType"
+    ).innerHTML = `${res[0].hero.slide3.roomType}`;
+    document.getElementById("price").innerHTML = `${res[0].hero.slide3.price}`;
+  }
+});
+
+document.getElementById("prev").addEventListener("click", () => {
+  console.log(swiper.activeIndex);
+  if (swiper.activeIndex === 0) {
+    document.getElementById(
+      "roomType"
+    ).innerHTML = `${res[0].hero.slide1.roomType}`;
+    document.getElementById("price").innerHTML = `${res[0].hero.slide1.price}`;
+  } else if (swiper.activeIndex === 1) {
+    document.getElementById(
+      "roomType"
+    ).innerHTML = `${res[0].hero.slide2.roomType}`;
+    document.getElementById("price").innerHTML = `${res[0].hero.slide2.price}`;
+  } else if (swiper.activeIndex === 2) {
+    document.getElementById(
+      "roomType"
+    ).innerHTML = `${res[0].hero.slide3.roomType}`;
+    document.getElementById("price").innerHTML = `${res[0].hero.slide3.price}`;
+  }
+});

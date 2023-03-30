@@ -17,7 +17,13 @@
       integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N"
       crossorigin="anonymous"
     ></script>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+    />
   </head>
 
   <body>
@@ -83,7 +89,7 @@
               <img
                 class="nav-shopping-bag"
                 src="./img/nav_bar/shopping-bag.svg"
-                alt=""
+                alt="shhoping_bag"
               />
             </div>
           </ul>
@@ -99,7 +105,7 @@
     >
       <div class="row d-flex align-items-center">
         <div class="col-12 col-md-6">
-          <div class="">
+          <div class="vacation_text">
             <h1>
               Enjoy Your <br />
               Dream Vacation
@@ -107,8 +113,10 @@
             <p class="p-2">Quite and endlessly beautiful hideway</p>
           </div>
           <div class="d-flex py-2">
-            <button class="about_us col-4 rounded-1 bg-light">About Us</button>
-            <a class="about_us col-4 text-decoration-none text-dark">
+            <button class="about_us col-sm-4 col-6 rounded-1 bg-light">
+              About Us
+            </button>
+            <a class="about_us col-sm-4 col-6 text-decoration-none text-dark">
               View HomeStay →
             </a>
           </div>
@@ -124,15 +132,21 @@
             <div class="check_in_out justify-content-between py-5">
               <p class="">
                 <span class="checkIn d-flex"
-                  ><img src="./img/dream_vacation/calendar.svg" alt="" />
-                  Checkin*</span
-                >
+                  ><img
+                    src="./img/dream_vacation/calendar.svg"
+                    alt="calander"
+                  />
+                  Checkin <span class="text-danger">*</span>
+                </span>
                 <input class="check_date" type="date" name="" id="checkIn" />
               </p>
               <p class="">
                 <span class="checkIn d-flex"
-                  ><img src="./img/dream_vacation/calendar.svg" alt="" />
-                  Checkout*</span
+                  ><img
+                    src="./img/dream_vacation/calendar.svg"
+                    alt="calender"
+                  />
+                  Checkout<span class="text-danger">*</span></span
                 >
                 <input class="check_date" type="date" name="" id="checkOut" />
               </p>
@@ -142,7 +156,7 @@
                 <img
                   class="me-3"
                   src="./img/dream_vacation/person_icon.svg"
-                  alt=""
+                  alt="adult"
                 />Adults
               </p>
               <select
@@ -162,7 +176,7 @@
                 <img
                   class="me-3"
                   src="./img/dream_vacation/children_icon.svg"
-                  alt=""
+                  alt="children"
                 />Children
               </p>
               <select
@@ -208,7 +222,7 @@
             <img
               class="w-50"
               src="./img/the_luxury/muhammad-ali-signature-6a40cd5a6c27559411db066f62d64886c42bbeb03b347237ffae98b0b15e0005.svg"
-              alt=""
+              alt="signature"
             />
             <br />MELINDA AMANDA - HOTEL MANAGER
           </div>
@@ -220,17 +234,17 @@
           <img
             class="the_luxury_image chef_img"
             src="./img/the_luxury/chef.jpeg"
-            alt=""
+            alt="chef"
           />
           <img
             class="the_luxury_image outdoor_view"
             src="./img/the_luxury/hoteloutdoor.avif"
-            alt=""
+            alt="outdoor"
           />
           <img
             class="the_luxury_image indoor_view chef"
             src="./img/the_luxury/hotel_indoor.jpeg"
-            alt=""
+            alt="indoor"
           />
         </div>
       </div>
@@ -245,10 +259,10 @@
         <div class="col-10 col-md-4 offset-sm-1">
           <div class="" id="k">
             <span>ELANGNCE AND COMFORT</span>
-            <h2>Standart Room</h2>
+            <h2 id="roomType">Standart Room</h2>
           </div>
           <div class="py-2">
-            From:<b>$150</b> / night <br />
+            From:<b id="price">$150</b> / night <br />
             Lorem ipsum, dolor sit amet consectetur adipisicing....
           </div>
           <table class="">
@@ -279,58 +293,35 @@
           </div>
         </div>
         <div class="container-lg col-10 col-md-7 my-3">
-          <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
-            <!-- Carousel indicators -->
-            <ol class="carousel-indicators">
-              <li
-                data-bs-target="#myCarousel"
-                data-bs-slide-to="0"
-                class="active"
-              ></li>
-              <li data-bs-target="#myCarousel" data-bs-slide-to="1"></li>
-              <li data-bs-target="#myCarousel" data-bs-slide-to="2"></li>
-            </ol>
-
-            <!-- Wrapper for carousel items -->
-            <div class="carousel-inner">
-              <div class="carousel-item active" id="one">
+          <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide" id="carousel1" value="c1">
                 <img
+                  class="imgCarousel carousel-item"
+                  id="one"
                   src="./img/slider/luxary_room.webp"
-                  class="d-block w-100"
-                  alt="Slide 1"
+                  alt="bedroom"
                 />
               </div>
-              <div class="carousel-item carousel-item-2">
+              <div class="swiper-slide carousel-item" id="carousel2" value="c2">
                 <img
-                  src="./img/slider/2.jpeg"
-                  class="d-block w-100"
-                  alt="Slide 2"
-                />
-              </div>
-              <div class="carousel-item">
-                <img
+                  class="imgCarousel"
+                  id="two"
                   src="./img/slider/middle_cost_room.jpeg"
-                  class="d-block w-100"
-                  alt="Slide 3"
+                  alt="bedroom2"
+                />
+              </div>
+              <div class="swiper-slide carousel-item" id="carousel3" value="c3">
+                <img
+                  class="imgCarousel"
+                  id="three"
+                  src="./img/slider/economy_room.webp"
+                  alt="bedroom3"
                 />
               </div>
             </div>
-
-            <!-- Carousel controls -->
-            <a
-              class="carousel-control-prev"
-              href="#myCarousel"
-              data-bs-slide="prev"
-            >
-              <span class="carousel-control-prev-icon"></span>
-            </a>
-            <a
-              class="carousel-control-next"
-              href="#myCarousel"
-              data-bs-slide="next"
-            >
-              <span class="carousel-control-next-icon"></span>
-            </a>
+            <div class="swiper-button-next" id="next"></div>
+            <div class="swiper-button-prev" id="prev"></div>
           </div>
         </div>
       </div>
@@ -345,7 +336,7 @@
         </div>
         <div class="col-12 py-3 col-md-4 col-lg-3 d-flex">
           <div class="py-2 pe-4">
-            <img src="./img/choose/cuisine_logo.svg" alt="" />
+            <img src="./img/choose/cuisine_logo.svg" alt="cuisin" />
           </div>
           <div class="text-secondary">
             <span class="text-dark fs-5"
@@ -357,7 +348,7 @@
         </div>
         <div class="col-12 py-3 col-md-4 col-lg-3 d-flex">
           <div class="py-2 pe-4">
-            <img src="./img/choose/yoga&gym_logo.svg" alt="" />
+            <img src="./img/choose/yoga&gym_logo.svg" alt="yoga" />
           </div>
           <div class="text-secondary">
             <span class="text-dark fs-5"
@@ -369,7 +360,7 @@
         </div>
         <div class="col-12 py-3 col-md-4 col-lg-3 d-flex">
           <div class="py-2 pe-4">
-            <img src="./img/choose/location_logo.svg" alt="" />
+            <img src="./img/choose/location_logo.svg" alt="location" />
           </div>
           <div class="text-secondary">
             <span class="text-dark fs-5"
@@ -408,7 +399,7 @@
           <img
             class="activites_img"
             src="./img/other_activities/sweeming_pool.jpg"
-            alt=""
+            alt="sweeming"
           />
         </div>
 
@@ -416,7 +407,7 @@
           <img
             class="activites_img w-100"
             src="./img/other_activities/hotel_outer_view.webp"
-            alt=""
+            alt="outdoor"
           />
         </div>
 
@@ -460,7 +451,7 @@
           <img
             class="experience_img"
             src="./img/experience_metters/wellness.jpeg"
-            alt=""
+            alt="experience"
           />
           <p class="text-secondary">WELNESS</p>
           <h3>Dedicated to wellness</h3>
@@ -477,7 +468,7 @@
           <img
             class="experience_img"
             src="./img/experience_metters/hotels-with-outdoor-pools-bath-1596640256.jpg"
-            alt=""
+            alt="experience"
           />
           <p class="text-secondary">GIFT CARD</p>
           <h3>The gift of future travel</h3>
@@ -495,7 +486,7 @@
           <img
             class="experience_img"
             src="./img/experience_metters/mikalro_shop.webp"
-            alt=""
+            alt="shop"
           />
           <p class="text-secondary">MIKALTO SHOP</p>
           <h3>The spa experience from home</h3>
@@ -512,7 +503,7 @@
           <img
             class="experience_img"
             src="./img/experience_metters/experience.jpeg"
-            alt=""
+            alt="shop"
           />
           <p class="text-secondary">EXPERIENCE</p>
           <h3>Adventure in the wild</h3>
@@ -553,7 +544,7 @@
             <img
               class="rounded-circle wonderful_profile_pic px-2"
               src="./img/wonderful/profile_pic.jpeg"
-              alt=""
+              alt="profile_pic"
             />
             <p class="text-secondary">
               <b class="text-dark">Easter Howard<br /></b>21-01-10
@@ -561,14 +552,14 @@
             <img
               class="wonderful_profile_icon"
               src="./img/wonderful/icon.svg"
-              alt=""
+              alt="icon"
             />
           </div>
           <div class="">
             <img
               class="wonderful_profile_dot"
               src="./img/wonderful/dot_icon.svg"
-              alt=""
+              alt="dot_icon"
             />
           </div>
           <span class="text-dark fs-5"
@@ -583,7 +574,7 @@
             <img
               class="rounded-circle wonderful_profile_pic px-2"
               src="./img/wonderful/profile_pic_2.png"
-              alt=""
+              alt="profile_pic"
             />
             <p class="text-secondary">
               <b class="text-dark">Selena Myer<br /></b>21-01-10
@@ -591,14 +582,14 @@
             <img
               class="wonderful_profile_icon"
               src="./img/wonderful/icon.svg"
-              alt=""
+              alt="icon"
             />
           </div>
           <div class="">
             <img
               class="wonderful_profile_dot"
               src="./img/wonderful/dot_icon.svg"
-              alt=""
+              alt="dot_icon"
             />
           </div>
           <span class="text-dark fs-5"
@@ -613,7 +604,7 @@
             <img
               class="rounded-circle wonderful_profile_pic px-2"
               src="./img/wonderful/profile_pic_3.jpeg"
-              alt=""
+              alt="profile_pic"
             />
             <p class="text-secondary">
               <b class="text-dark">Jane Cooper<br /></b>21-01-10
@@ -621,14 +612,14 @@
             <img
               class="wonderful_profile_icon"
               src="./img/wonderful/icon.svg"
-              alt=""
+              alt="icon"
             />
           </div>
           <div class="">
             <img
               class="wonderful_profile_dot"
               src="./img/wonderful/dot_icon.svg"
-              alt=""
+              alt="dot_icon"
             />
           </div>
           <span class="text-dark fs-5"
@@ -647,7 +638,7 @@
       <div class="row d-flex align-items-center">
         <div class="col-11 col-md-4 offset-1">
           <div class="">
-            <img src="./img/map_section/flower.svg" alt="" />
+            <img src="./img/map_section/flower.svg" alt="flower" />
             <p class="text-primary">GETTING HERE</p>
             <h2>How to get there?</h2>
             <p class="text-secondary">
@@ -659,7 +650,7 @@
 
           <div class="d-flex align-items-center">
             <div class="px-2">
-              <img src="./img/map_section/plane-svgrepo-com.svg" alt="" />
+              <img src="./img/map_section/plane-svgrepo-com.svg" alt="plane" />
             </div>
             <div class="px-2">
               <p><b> By plane</b></p>
@@ -671,7 +662,7 @@
           </div>
           <div class="d-flex align-items-center">
             <div class="px-2">
-              <img src="./img/map_section/bus-svgrepo-com.svg" alt="" />
+              <img src="./img/map_section/bus-svgrepo-com.svg" alt="bus" />
             </div>
             <div class="">
               <p><b> By bus</b></p>
@@ -683,7 +674,7 @@
           </div>
           <div class="d-flex align-items-center">
             <div class="px-2">
-              <img src="./img/map_section/car-svgrepo-com (1).svg" alt="" />
+              <img src="./img/map_section/car-svgrepo-com (1).svg" alt="car" />
             </div>
             <div class="">
               <p><b> By van</b></p>
@@ -695,7 +686,7 @@
           </div>
         </div>
 
-        <div class="map_section_map col-11 col-md-6 offset-1 py-5 ">
+        <div class="map_section_map col-11 col-md-6 offset-1 py-5">
           <iframe
             class="rounded-3"
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3684.043901925615!2d88.42922191494593!3d22.57746128518026!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a0275a5466e0099%3A0x563fb49fb6394261!2sItobuz%20Technologies%20Pvt.%20Ltd.!5e0!3m2!1sen!2sin!4v1679915271728!5m2!1sen!2sin"
@@ -715,20 +706,22 @@
     <section class="container-fluid wellness">
       <div class="row d-flex align-items-center">
         <div
-          class="col-12  col-md-7    d-flex justify-content-md-start justify-content-center"
+          class="col-12 col-md-7 d-flex justify-content-md-start justify-content-center"
         >
-          <div class="ram wellness_bridge col-8 ">
-            <img src="./img/wellness/bridge.jpeg" alt="" />
+          <div class="ram wellness_bridge col-8">
+            <img src="./img/wellness/bridge.jpeg" alt="bridge" />
           </div>
           <div class="wellness_img col-4">
-            <img src="./img/wellness/home_jungle.jpeg" alt="" /><img
+            <img src="./img/wellness/home_jungle.jpeg" alt="jungle" /><img
               src="./img/wellness/girl-jungle.jpeg"
-              alt=""
+              alt="homejungle"
             />
           </div>
         </div>
 
-        <div class="col-12 offset-0 col-md-5 p-3  text-center align-items-center">
+        <div
+          class="col-12 offset-0 col-md-5 p-3 text-center align-items-center"
+        >
           <p>SPA & WELLNESS</p>
           <h2>Side by Side with Nature</h2>
           <p class="text-secondary">
@@ -779,7 +772,7 @@
       <img
         class="footer_bg_img"
         src="./img/footer/Blue-Pattern-Background-For-Free-Download.jpg"
-        alt=""
+        alt="footer_bg"
       />
     </div>
 
