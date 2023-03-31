@@ -1,4 +1,4 @@
- body {
+body {
   padding: 0;
   margin: 0;
 }
@@ -71,17 +71,16 @@ li a {
 
 .outdoor_view {
   position: absolute;
-  top: 45%;
-  left: 20%;
+  top: 55%;
+  left: 7%;
   z-index: 3;
 }
 .indoor_view {
   position: absolute;
   top: 35%;
-  left: 40%;
+  left: 20%;
   z-index: 2;
 }
-
 .chef_img {
   max-height: 40%;
 
@@ -192,7 +191,7 @@ li a {
   max-width: 2rem;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 500px) {
   .luxuryContainer {
     display: none;
   }
@@ -214,7 +213,7 @@ li a {
   max-height: 9vh;
   width: 100%;
 }
-@media screen and (max-width: 200px) {
+@media screen and (min-width: 200px) {
   .social_media {
     display: none;
   }
